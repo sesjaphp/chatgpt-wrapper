@@ -1,2 +1,4 @@
-1. finish redirects
-2. add topbar to all (maybe flask with base.html)
+1. finish redirects (done)
+2. add topbar to all (maybe flask with base.html) (done)
+3. style pricing page
+4. style help page

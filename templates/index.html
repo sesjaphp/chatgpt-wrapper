@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}b2b Saas{% endblock %}
+
+{% block content %}
+    <div class="chat-wrapper">
+        <div id="chat-header">What's up?</div>
+        <div class="card">
+            <textarea class="text-input" placeholder="Message..." rows="1"></textarea>
+            <div class="card-buttons">
+                <div class="button-card"><a href="#">Attach</a></div>
+                <div class="button-card"><a href="#">Search</a></div>
+                <button class="button-card primary" type="submit">Submit</button>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    <script>
+        const textarea = document.querySelector('.text-input');
+        const submitButton = document.getElementById('submit-button');
+
+        function checkTextarea() {
+            const text = textarea.value.trim();
+            submitButton.disabled = text.length === 0;
+        }
+
+        textarea.addEventListener('input', function() {
+            this.style.height = 'auto';
+            const newHeight = Math.min(this.scrollHeight, 300);
+            this.style.height = newHeight + 'px';
+
+            checkTextarea();
+        });
+
+        checkTextarea();
+    </script>
+{% endblock %}

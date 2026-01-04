@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}">
+        <title>{% block title %}ChatGPT Wrapper{% endblock %}</title>
+    </head>
+    <body>
+        <div class="topbar-wrapper">
+            <div class="topbar">
+                <div class="topbar-left">
+                    <a href="{{ url_for('index') }}" class="button-topbar"><img id="logo" src="https://files.sexual.mom/d95x5paiur8jkxlcq3ushb8wt/d"></a>
+                </div>
+                <div class="topbar-buttons">
+                    <div class="button-topbar dropdown">
+                        <a href="#">About</a>
+                        <div class="dropdown-content">
+                            <a href="{{ url_for('page', path='about/mission' ) }}">Our Misson</a>
+                            <a href="{{ url_for('page', path='about/teams') }}">Teams</a>
+                            <a href="{{ url_for('page', path='about/career') }}">Career</a>
+                        </div>
+                    </div>
+                    <div class="button-topbar dropdown">
+                        <a href="#">Features</a>
+                        <div class="dropdown-content">
+                            <a href="{{ url_for('page', path='features/agent') }}">Agent</a>
+                            <a href="{{ url_for('page', path='features/apps') }}">Apps</a>
+                            <a href="{{ url_for('page', path='features/integration') }}">Integration</a>
+                            <a href="{{ url_for('page', path='features/automation') }}">Automation</a>
+                        </div>
+                    </div>
+                    <div class="button-topbar dropdown">
+                        <a href="#">Learn</a>
+                        <div class="dropdown-content">
+                            <a href="{{ url_for('page', path='learn/students') }}">Students</a>
+                            <a href="{{ url_for('page', path='learn/teachers') }}">Teachers</a>
+                            <a href="{{ url_for('page', path='learn/university') }}">University</a>
+                        </div>
+                    </div>
+                    <div class="button-topbar">
+                        <a href="{{ url_for('page', path='images/images') }}">Images</a>
+                    </div>
+                    <div class="button-topbar">
+                        <a href="{{ url_for('page', path='pricing/pricing') }}">Pricing</a>
+                    </div>
+                    <div class="button-topbar dropdown">
+                        <a href="#">Documentation</a>
+                        <div class="dropdown-content">
+                            <a href="{{ url_for('page', path='documentation/privacy') }}">Privacy Policy</a>
+                            <a href="{{ url_for('page', path='documentation/terms') }}">Terms of Service</a>
+                            <a href="{{ url_for('page', path='documentation/abuse') }}">Report Abuse</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="topbar-right">
+                    <div class="help button-topbar"><a href="{{ url_for('page', path='help/help') }}">?</a></div>
+                </div>
+            </div>
+        </div>
+
+        {% block content %}{% endblock %}
+
+        <div class="footer">
+            <label>By starting a chat you agree to our <a href="{{url_for('page', path='documentation/terms')}}">Terms</a> and <a href="{{url_for('page', path='documentation/privacy')}}">Privacy Policy</a></label>
+        </div>
+
+        {% block scripts %}{% endblock %}
+    </body>
+</html>
