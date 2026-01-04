@@ -1,1 +1,2 @@
 1. style pricing
+2. fix dropdown being under pricing cards
