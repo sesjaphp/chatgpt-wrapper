@@ -1,4 +1,1 @@
-1. finish redirects (done)
-2. add topbar to all (maybe flask with base.html) (done)
-3. style pricing page
-4. style help page
+1. style pricing
