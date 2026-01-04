@@ -1,0 +1,2 @@
+1. finish redirects
+2. add topbar to all (maybe flask with base.html)

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="assets/styles/index.css">
+    </head>
+    <body>
+        <div class="topbar-wrapper">
+            <div class="topbar">
+                <div class="topbar-left">
+                    <a href="/src/index.html" class="button-topbar"><img id="logo" src="https://files.sexual.mom/d95x5paiur8jkxlcq3ushb8wt/d"></a>
+                </div>
+                <div class="topbar-buttons">
+                    <div class="button-topbar dropdown">
+                        <a href="">About</a>
+                        <div class="dropdown-content">
+                            <a href="/src/pages/about/mission.html">Our Misson</a>
+                            <a href="/src/pages/about/teams.html">Teams</a>
+                            <a href="/src/pages/about/career.html">Career</a>
+                        </div>
+                    </div>
+                    <div class="button-topbar dropdown">
+                        <a href="">Features</a>
+                        <div class="dropdown-content">
+                            <a href="/src/pages/features/agent.html">Agent</a>
+                            <a href="/src/pages/features/apps.html">Apps</a>
+                            <a href="/src/pages/features/integration.html">Integration</a>
+                            <a href="/src/pages/features/automation.html">Automation</a>
+                        </div>
+                    </div>
+                    <div class="button-topbar dropdown">
+                        <a href="">Learn</a>
+                        <div class="dropdown-content">
+                            <a href="#">Students</a>
+                            <a href="#">Teachers</a>
+                            <a href="#">University</a>
+                        </div>
+                    </div>
+                    <div class="button-topbar">
+                        <a href="">Images</a>
+                    </div>
+                    <div class="button-topbar">
+                        <a href="">Pricing</a>
+                    </div>
+                    <div class="button-topbar dropdown">
+                        <a href="">Documentation</a>
+                        <div class="dropdown-content">
+                            <a href="#">Privacy Policy</a>
+                            <a href="#">Terms of Service</a>
+                            <a href="#">Report Abuse</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="topbar-right">
+                    <div class="help button-topbar"><a href="">?</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="chat-wrapper">
+            <div id="chat-header">What's up?</div>
+            <div class="card">
+                <textarea class="text-input" placeholder="Message..." rows="1"></textarea>
+                <div class="card-buttons">
+                    <div class="button-card"><a href="">Attach</a></div>
+                    <div class="button-card"><a href="">Search</a></div>
+                    <div class="button-card"><a href="">Study</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <label>By starting a chat you agree to our <a href="">Terms</a> and <a href="">Privacy Policy</a></label>
+        </div>
+
+        <script>
+            const textarea = document.querySelector('.text-input');
+                textarea.addEventListener('input', function() {
+                this.style.height = 'auto';
+
+            const newHeight = Math.min(this.scrollHeight, 300);
+            this.style.height = newHeight + 'px';
+        });
+        </script>
+    </body>
+</html>
